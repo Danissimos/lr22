@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Лабораторная 22</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body><center>
+    <p>Данные об вашем браузере:</p>
+    <div id="div1">
+        <script>
+            document.getElementById("div1").innerHTML = 'Версия вашего браузера: ' + navigator.appVersion;
+        </script>
+    </div>
+</center>
+<script src="script.js"></script>
+</body>
+<script>
+    function sumInput() {
+        let numbers = [];
+        while (true) {
+        let value = prompt("Введите число", 0);
+        if (value === "" || value === null || !isFinite(value)) break;
+        numbers.push(+value);
+        }
+        let sum = 0;
+        for (let number of numbers) {
+        sum += number;
+        }
+        return sum;
+        }
+        alert(`Сумма всех введенных чисел равна ` + sumInput() );
+</script>
+<script>
+var x,y,z;
+x=prompt('Введите первое число ');
+x=parseInt(x);
+y=prompt('Введите второе число ');
+y=parseInt(y);
+z=prompt('Введите третье число ');
+z=parseInt(z);
+if(x>y&&x>z) alert(`Наибольше первое число: ` + x);
+if(y>x&&y>z) alert(`Наибольше второе число: ` + y);
+if(z>y&&z>x) alert(`Наибольше третье число: ` + z);
+</script>
+<script>
+var a,b;
+a=prompt('Введите число ');
+a=parseInt(a);
+b=prompt('Введите степень числа ');
+b=parseInt(b);
+alert(`Число ${a}, возведенное в степень ${b} равно ` + Math.pow(a,b));
+</script>
+</html>
